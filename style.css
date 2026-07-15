@@ -1,0 +1,138 @@
+/* RESET */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+    color: white;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+/* ====================
+   BOX DA CALCULADORA  
+==================== */
+.master {
+    width: 380px;
+    padding: 20px;
+    background: #111;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* ====================
+        TELA 
+==================== */
+.screen {
+    font-size: 65px;
+    overflow: auto;
+    padding: 20px;
+    text-align: right;
+}
+
+/* ====================
+    LINHAS DE BOTÕES
+==================== */
+.calc-buttons-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+/* ====================
+      BOTÕES
+==================== */
+.calc-button {
+    background-color: rgb(53, 53, 53);
+    border: none;
+    color: white;
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* Hover padrão */
+.calc-button:hover {
+    background-color: rgb(37, 37, 37);
+}
+
+/* ====================
+      BOTÕES .TOP
+==================== */
+.top {
+    background-color: rgb(146, 146, 146);
+    color: black;
+}
+
+/* Hover da .top — AGORA FUNCIONA */
+.top:hover {
+    background-color: rgb(200, 200, 200);
+    color: black;
+}
+
+/* ====================
+     BOTÃO LARANJA (=)
+==================== */
+.calc-buttons-row .calc-button:last-child {
+    background-color: rgb(243, 131, 2);
+    color: white;
+}
+
+.calc-buttons-row .calc-button:last-child:hover {
+    background-color: rgb(255, 165, 70);
+}
+
+/* ====================
+     RESPONSIVO
+==================== */
+
+/* 📟 TABLET */
+@media (max-width: 900px) and (min-width: 501px) {
+    .master {
+        width: 320px;
+    }
+
+    .screen {
+        font-size: 55px;
+    }
+
+    .calc-button {
+        font-size: 30px;
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 500px) {
+    .master {
+        width: 90%;
+    }
+
+    .screen {
+        font-size: 45px;
+        padding: 15px;
+    }
+
+    .calc-button {
+        font-size: 28px;
+        width: 60px;
+        height: 60px;
+    }
+}
